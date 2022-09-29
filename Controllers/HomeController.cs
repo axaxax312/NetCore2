@@ -6,6 +6,7 @@ namespace NetCore_2.Controllers;
 
 public class HomeController : Controller
 {
+    GiaiPhuongTrinh gpt = new GiaiPhuongTrinh();
     private readonly ILogger<HomeController> _logger;
 
     public HomeController(ILogger<HomeController> logger)
@@ -15,6 +16,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+       
         return View();
     }
 
@@ -28,4 +30,16 @@ public class HomeController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+    public IActionResult GiaiPhuongTrinh(){
+        return View();
+    }
+    // [HttpPost]
+    // public IActionResult GiaiPhuongtrinh(string hesoA,string hesoB, string hesoC, string del ){
+    //     String ThongBaoBacNhat=gpt.GiaiPhuongTrinhBacNhat( hesoA, hesoB);
+        
+    //     ViewBag.message = ThongBaoBacNhat;
+    //     return View();
+        
+    // }
 }
+

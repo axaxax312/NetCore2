@@ -6,6 +6,7 @@ namespace NetCore_2.Controllers;
 public class StudentController : Controller
 {
     public IActionResult Index(){
+        ViewBag.Student = new Student();
         return View();
     } 
     public IActionResult Create(){
